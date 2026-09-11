@@ -24,9 +24,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 4105,
-      "sha256": "ebef95557ea84b36301e0b0a387a80ba73c42ff5a24751f616e876f7d5fd07c0",
-      "gitBlobSha1": "6dc03cc0ee5a03df519c6016018b1b7475f86fa3"
+      "bytes": 4335,
+      "sha256": "e5a61e2e75154809fd35aefb42e76110729d539a019a14f85fa5c680693bb46d",
+      "gitBlobSha1": "25d51ef681ce2e48cc781b67ee65b9cb03620761"
     },
     {
       "path": "data/question-bank.json",
@@ -42,9 +42,9 @@
     },
     {
       "path": "dist/app.js",
-      "bytes": 18202,
-      "sha256": "279a78e22290ff8e4c9387a3a27f2c5e5f2636f2357dafe66b886b81565b9b85",
-      "gitBlobSha1": "73e8fb867014cee3d64c095b23399ed6a8abd277"
+      "bytes": 20705,
+      "sha256": "9a59c2255ee957bea2007124326069520c4af399c3f2bdfad6cd475c42d61621",
+      "gitBlobSha1": "556aa1201c1e5968f2fb5fe06f8626f7090aae17"
     },
     {
       "path": "dist/chapter2.js",
@@ -90,9 +90,15 @@
     },
     {
       "path": "dist/index.html",
-      "bytes": 3009,
-      "sha256": "79143c0249edec36339423f335171bfebc6b3cdbda65248b25673b3c9ee47592",
-      "gitBlobSha1": "f2376954cef7c869c70cae388b8048171c07bc76"
+      "bytes": 3046,
+      "sha256": "27170486fe31edefa27620ae898c9073edb9ffdf96023313d465969ee412e68d",
+      "gitBlobSha1": "744e34ecf4aa0459ea45b420c195afb2ea920bc9"
+    },
+    {
+      "path": "dist/pdf-export.js",
+      "bytes": 7921,
+      "sha256": "41071b1c41729ea6a3add277eb883ee78e6673096b64259caab924ac4507bd56",
+      "gitBlobSha1": "ca541400c45e28727a6cc962039574fcfd3078f3"
     },
     {
       "path": "dist/reviews.js",
@@ -102,21 +108,21 @@
     },
     {
       "path": "dist/style.css",
-      "bytes": 13923,
-      "sha256": "15bb4e9c7ea82f9981d788192d7e46cb2f8c97f69fe303f5b3058e376ba3749f",
-      "gitBlobSha1": "72e9e158a685a31ddf0d97bd36005a9dd6d8a8a3"
+      "bytes": 14637,
+      "sha256": "070a2bc9457bf4e0621cc942fb815a83bf625a28bc641552552cab52d3a10dcc",
+      "gitBlobSha1": "9098045f91b3b17e893b67085434017c24796026"
     },
     {
       "path": "docs/architecture.md",
-      "bytes": 2687,
-      "sha256": "f81a9778f37551a8d0cb098faac44e72560d4cfddcb7ecb39be9645ec9549790",
-      "gitBlobSha1": "118e9578b7701c0c6182aabab0bf9e970fdc58a2"
+      "bytes": 3808,
+      "sha256": "f04016ff81e0d86e631b4a2b3daa75d196189ab18c01d62930c31f6554c08ccd",
+      "gitBlobSha1": "1ef6b48c541bd73750c171bba5265e9d55ea7d6b"
     },
     {
       "path": "docs/development-log.md",
-      "bytes": 2441,
-      "sha256": "6e163bafc0e0fcc30c09205f1ed99b7a398e6bc3b259a322bed7c74842dda43f",
-      "gitBlobSha1": "c3d4e3659487c4c6591903f00460347e85fe685c"
+      "bytes": 3302,
+      "sha256": "4f221ceae6d62417e284f09fb8a13b3f941801318c5b21ac18e05c7489af3f6e",
+      "gitBlobSha1": "4887d9c663af0b127eaa524f9b8443141191fba3"
     },
     {
       "path": "docs/requirements.md",
@@ -126,27 +132,27 @@
     },
     {
       "path": "docs/validation.md",
-      "bytes": 1779,
-      "sha256": "d68d3701e62b01db314f3d9625d05a374189b166d0a20ed1492d231d7d86d902",
-      "gitBlobSha1": "44debcc252c0eaf9f1923008776ce4d5b57cfc16"
+      "bytes": 3637,
+      "sha256": "0e84eb33fccc2c5eb52a22a5e9420fc507aeb5e4ca1fc5deba0672a2a47b8841",
+      "gitBlobSha1": "82e502f93146e7539452eb41df14dc3a939dfee6"
     },
     {
       "path": "outputs/使用说明.md",
-      "bytes": 1704,
-      "sha256": "02bae23b317d3a576dfcf247ed9e9e482ff66c807334b5c2205309c54708a3d4",
-      "gitBlobSha1": "f8702fe8594c251c4b373a802997565d671d1a78"
+      "bytes": 2268,
+      "sha256": "a92d7fd209c42bce5dc0ab6541f612edf023fbb5903a38cbb8ba6844ce7e44af",
+      "gitBlobSha1": "65e69b87f0d25a9bba196ded3fb9e0b0941f5d74"
     },
     {
       "path": "outputs/循题-七上数学家长组卷.html",
-      "bytes": 97321,
-      "sha256": "4654d2e1fa710863308423ba4e9fbe657c975c41addcac77c9a03621ef5f7c7e",
-      "gitBlobSha1": "4a0259a3fcb45ddd0c4692516462f3a9c8a17e1f"
+      "bytes": 108478,
+      "sha256": "3c1a297706350492c6e717d980643444e7b1c4b038bd65cdb88c0560bc8f29fc",
+      "gitBlobSha1": "83dbf1aa74629ca3aa71e82acdd5fde56b68aef6"
     },
     {
       "path": "package.json",
-      "bytes": 412,
-      "sha256": "5573384ac67836cadbdf11ae99c5c88cd4f39c86363e5d27d238a5e3a68e4944",
-      "gitBlobSha1": "9958afc23146241ea96b3b49f0f5a12110a63518"
+      "bytes": 441,
+      "sha256": "8cd3ce276ecefdc2fbe586d45377d485a0defd85e3eb1efcca579c1194407391",
+      "gitBlobSha1": "6c7ccd99788a760e09ad575095d10a16fad30a8b"
     },
     {
       "path": "scripts/create-upload-manifest.mjs",
@@ -167,10 +173,16 @@
       "gitBlobSha1": "72187ed64caf5f09cd6d44278c5e2be86d261991"
     },
     {
+      "path": "scripts/test-pdf.mjs",
+      "bytes": 3255,
+      "sha256": "c722dba7ccc8e931b3737a4c5272dd1b42f085752ae30993d9b4fc425e9c1aa8",
+      "gitBlobSha1": "19e4942db512355f29151645c2a0486b71c61781"
+    },
+    {
       "path": "work/check-offline.mjs",
-      "bytes": 573,
-      "sha256": "c6e6f24720a68e944a69c913bfdfecdea568352d9c9a8e572fe69eda277469cf",
-      "gitBlobSha1": "b155a29beb511cde8789f70438221cd3d6538737"
+      "bytes": 574,
+      "sha256": "93e15c1a2546e2094ad806c16256cadc423b440ce15804e4c4aed0c355329e3b",
+      "gitBlobSha1": "3ee36d6600c0cfe2955e59d8b6102913ca034c3d"
     },
     {
       "path": "work/export-offline.mjs",
