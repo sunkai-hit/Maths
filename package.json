@@ -1,0 +1,13 @@
+{
+  "name": "xunti-maths",
+  "version": "0.1.0",
+  "private": true,
+  "description": "鲁教版五四制七上数学家长选题与打印组卷应用",
+  "scripts": {
+    "start": "node work/serve.mjs",
+    "build:offline": "node work/export-offline.mjs",
+    "export:data": "node scripts/export-data.mjs",
+    "test": "node work/validate.mjs && node work/check-offline.mjs"
+  },
+  "engines": {"node": ">=20"}
+}
