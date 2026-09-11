@@ -7,7 +7,7 @@
     "start": "node work/serve.mjs",
     "build:offline": "node work/export-offline.mjs",
     "export:data": "node scripts/export-data.mjs",
-    "test": "node work/validate.mjs && node work/check-offline.mjs"
+    "test": "node work/validate.mjs && node work/check-offline.mjs && node scripts/test-pdf.mjs"
   },
   "engines": {"node": ">=20"}
 }
