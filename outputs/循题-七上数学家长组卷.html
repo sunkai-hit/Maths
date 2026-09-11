@@ -3,6 +3,9 @@
 @media(max-width:720px){header{padding:12px 16px;min-height:74px;gap:10px}.brand>span:last-child{display:none}.layout{display:block}aside{position:static;height:auto;border-right:0;padding:18px 18px 8px}aside h2,.aside-note,aside .eyebrow{display:none}#chapters{display:flex;gap:6px;overflow-x:auto}.chapter{min-width:126px}.chapter>button{gap:7px}.sections{display:none}main{padding:18px 18px 70px}h1{font-size:28px}.breadcrumb{margin-bottom:20px;font-size:12px}.breadcrumb span{padding:0 4px}.section-heading{flex-wrap:wrap}.question{padding:18px}.guide{padding:20px;margin-top:18px}.chapter-symbol{font-size:50px}.mobile-section{display:flex;flex-direction:column;font-size:14px;gap:6px;margin:18px 0}.lesson-tabs{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px}.lesson-tabs button{min-width:150px;max-width:240px;flex-shrink:0}.lesson-tabs button:first-child{min-width:130px}.q-bottom{flex-wrap:wrap}.q-bottom>div{display:flex;gap:8px}.q-bottom button{padding:6px}.q-meta{gap:8px}.q-topic{max-width:100%}.q-id{display:none}.options-grid{grid-template-columns:1fr;gap:10px}.filter-line{flex-wrap:wrap;padding-bottom:14px;gap:0}#filters{gap:2px;padding-bottom:10px}.filter{padding:6px 10px}.filter-top{gap:12px}.filter-top select{width:130px}.edition-tag{display:none}dialog{padding:20px;width:calc(100% - 20px);max-height:94vh}.dialog-head h2{font-size:21px}.paper-item{gap:10px;flex-wrap:wrap}.order-buttons{margin-left:auto}.paper-footer{bottom:-20px;padding:18px 0}.paper-footer>.muted{width:100%}.paper-settings label{min-width:0}.paper-setting-row{gap:12px}.paper-toolbar{flex-wrap:wrap}.preview-pages{padding:10px 0}.paper-document{padding:14px;font-size:15px}.paper-document h1{font-size:20px}.student-line{font-size:12px}.solution{padding:16px}.example{padding:16px}.coverage summary span{float:none;margin-left:10px}}
 @page{size:A4;margin:16mm 16mm 18mm}
 @media print{html,body{background:white!important;margin:0!important;padding:0!important;color:#000!important}body>header,body>.layout,body>dialog,body>#toast{display:none!important}dialog::backdrop{display:none!important}#print-root{display:block!important}.paper-document{padding:0!important;font-size:11pt;line-height:1.9;color:#000}.paper-document h1{font-size:18pt}.print-meta,.student-line{font-size:10pt}.print-question{break-inside:avoid;page-break-inside:avoid;padding-top:5mm}.print-example{break-inside:avoid;page-break-inside:avoid}.paper-document .solution{font-size:10.5pt;line-height:1.7}.paper-document .solution li{line-height:1.7}.paper-document .options-grid{font-size:11pt;grid-template-columns:repeat(2,minmax(0,1fr))}.answer-space{height:30mm}.compact .answer-space:not(.short){height:15mm}.large .answer-space:not(.short){height:45mm}.answer-space.short{height:5mm}.paper-document .math-figure{width:65mm}.paper-document .math-figure svg{stroke:#111}.paper-document .math-figure .graph{stroke:#111}.paper-document .math-figure text{fill:#111}.paper-document .math-figure figcaption{font-size:8pt}.print-end{font-size:9pt}.print-q-title{gap:3mm}}
+
+/* Direct PDF download and paginated preview. */
+.print-hint{flex-basis:100%;margin:0;font-size:13px;color:var(--muted)}.pdf-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}.download-link{display:inline-block;padding:9px 18px;border-radius:8px;text-decoration:none;font-size:16px}.pdf-pages{background:#e9eef0;padding:16px}.pdf-pages figure{margin:0 0 22px}.pdf-pages img{display:block;width:100%;height:auto;box-shadow:0 2px 12px #0002;background:white}.pdf-pages figcaption{text-align:center;font-size:13px;color:var(--muted);padding:10px}.pdf-readable{margin-top:20px;border-top:1px solid var(--line);padding-top:14px}.pdf-readable summary{cursor:pointer;color:var(--green)}
 </style></head><body><header><div class="brand"><span class="mark">△</span><strong>循题</strong><span>家长备课台</span></div><div class="edition">鲁教版 · 五四制 · 七年级上册</div><button id="open-paper" class="primary">我的练习卷 <b id="cart-count">0</b></button></header><div class="layout"><aside id="nav"><p class="eyebrow">教材目录</p><h2>数学 · 七年级上册</h2><div id="chapters"></div><div class="aside-note">按内容拆分建议课时<br>学习进度与难度由家长选择</div></aside><main id="main"><div class="breadcrumb">数学七上 / 第一章 三角形 / 认识三角形</div><div class="title-row"><div><p class="eyebrow">CHAPTER 01</p><h1>认识三角形</h1><p class="muted">从知识点出发，沿着题型逐步深入。</p></div><span class="chapter-symbol">△</span></div><section class="guide"><div><span class="pill">建议课时 1</span><h2>三边关系与三角形判定</h2><p>任意两边之和大于第三边。已知两边 a、b，第三边 c 满足 |a−b| &lt; c &lt; a+b。</p></div><button id="example-button">查看例题讲解 ↗</button></section><section class="bank"><div class="section-heading"><h2>同类题练习</h2><span class="muted">先理解例题，再选择练习</span></div><div id="filters"><button class="filter active">全部难度</button><button class="filter">基础题</button><button class="filter">提高题</button><button class="filter">压轴题</button></div><div id="questions"><article class="question"><div class="q-meta"><span class="pill">基础题</span><span>选择题 · 三边关系</span></div><p>下列各组线段长度中，能组成三角形的是（　）。</p><div class="options">A. 2，3，5　　B. 3，4，5　　C. 1，2，4　　D. 2，2，4</div><div class="q-bottom"><button>查看解析</button><button class="pick">＋ 加入练习卷</button></div></article></div></section></main></div><dialog id="detail"></dialog><dialog id="paper"></dialog><div id="toast" role="status" aria-live="polite"></div><div id="print-root"></div><script>
 /* 原创同步例题与练习。章节依据用户提供的目录，建议课时按内容组织。 */
 const curriculum=[
@@ -305,6 +308,84 @@ findTopic('描点作图与坐标轴交点').example.diagram={points:{A:[2,0,6,19
 findTopic('一次函数与方程、不等式').questions[2].diagram={points:{A:[-2,0,-20,19],B:[4,0,6,19],P:[2,4],O:[0,0,5,19]},lines:[['A','B'],['A','P'],['P','B']],bounds:[-3,5,-1,5],axes:true,label:'两直线交点 P(2,4)，与 x 轴交于 A(-2,0)、B(4,0)'};
 
 </script><script>
+/* Offline A4 PDF exporter. Raster pages preserve CJK and mathematical glyphs without external fonts.
+   PDF image streams: ISO 32000 image XObject /DCTDecode; see https://pdfa.org/wp-content/uploads/2017/07/PDFraster10.pdf */
+const PaperPDF = (() => {
+  const W = 595.28, H = 841.89, M = 43, BOTTOM = H - 48, SCALE = 3;
+  const FONT = '"Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif';
+  const encoder = new TextEncoder();
+  const join = chunks => { const bytes = new Uint8Array(chunks.reduce((n,b)=>n+b.length,0)); let at=0; for(const b of chunks){bytes.set(b,at);at+=b.length;} return bytes; };
+  function decode(data){const raw=atob(data.split(',').pop()),bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);return bytes;}
+  function buildPDF(images){
+    if(!images.length)throw Error('没有可导出的页面');
+    const objects=[null];
+    objects[1]=encoder.encode('<< /Type /Catalog /Pages 2 0 R >>');
+    objects[2]=encoder.encode(`<< /Type /Pages /Count ${images.length} /Kids [${images.map((_,i)=>(3+i*3)+' 0 R').join(' ')}] >>`);
+    images.forEach((image,i)=>{const n=3+i*3,bytes=decode(image.data),paint=encoder.encode(`q\n${W} 0 0 ${H} 0 0 cm\n/Im0 Do\nQ\n`);
+      objects[n]=encoder.encode(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${W} ${H}] /Resources << /XObject << /Im0 ${n+1} 0 R >> >> /Contents ${n+2} 0 R >>`);
+      objects[n+1]=join([encoder.encode(`<< /Type /XObject /Subtype /Image /Width ${image.width} /Height ${image.height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${bytes.length} >>\nstream\n`),bytes,encoder.encode('\nendstream')]);
+      objects[n+2]=join([encoder.encode(`<< /Length ${paint.length} >>\nstream\n`),paint,encoder.encode('endstream')]);
+    });
+    const chunks=[encoder.encode('%PDF-1.4\n%Xunti\n')],offsets=[0];let position=chunks[0].length;
+    for(let i=1;i<objects.length;i++){offsets.push(position);const object=join([encoder.encode(`${i} 0 obj\n`),objects[i],encoder.encode('\nendobj\n')]);chunks.push(object);position+=object.length;}
+    const xref=position;chunks.push(encoder.encode(`xref\n0 ${objects.length}\n0000000000 65535 f \n${offsets.slice(1).map(n=>String(n).padStart(10,'0')+' 00000 n \n').join('')}trailer\n<< /Size ${objects.length} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`));return join(chunks);
+  }
+  function layout(paper,measure){
+    const pages=[[]];let page=pages[0],y=M;
+    const next=()=>{page=[];pages.push(page);y=M;};
+    function paragraph(text,size=11,bold=false,align='left',gap=6){
+      const rows=[];for(const raw of String(text).split('\n')){let row='';for(const char of raw){if(row&&measure(row+char,size,bold)>W-M*2){rows.push(row);row=char;}else row+=char;}rows.push(row);}
+      const lines=rows.map(text=>({kind:'text',text,size,bold,align,height:size*1.85}));if(gap)lines.push({kind:'space',height:gap});return lines;
+    }
+    function place(block){const total=block.reduce((n,u)=>n+u.height,0);if(total<=BOTTOM-M&&y+total>BOTTOM&&page.length)next();for(const unit of block){if(y+unit.height>BOTTOM&&page.length)next();if(unit.kind!=='space')page.push({...unit,x:M,y});y+=unit.height;}}
+    function question(q,label,answer){let block=[...paragraph(label+q.text)];
+      if(q.diagram)block.push({kind:'diagram',diagram:q.diagram,height:155});
+      if(q.options?.length)for(let i=0;i<q.options.length;i++)block.push(...paragraph('ABCD'[i]+'.  '+q.options[i],11,false,'left',2));
+      if(answer){block.push(...paragraph('答案：'+q.answer,11,true));q.steps.forEach((step,i)=>block.push(...paragraph((i+1)+'. '+step,10.5)));}
+      else block.push({kind:'space',height:['选择题','填空题'].includes(q.type)?16:({compact:50,normal:90,large:140}[paper.space]||90)});
+      block.push({kind:'space',height:14});return block;
+    }
+    place(paragraph(paper.title,17,true,'center',8));
+    place(paragraph(`鲁教版五四制 · 七年级上册数学　共 ${paper.questions.length} 题`,10,false,'center',10));
+    if(!paper.answer)place(paragraph('姓名：________________　日期：________________',11,false,'center',22));
+    if(paper.examples){place(paragraph('例题讲解',14,true));for(const topic of paper.lessons){place([...paragraph(topic.name,12,true),...paragraph(topic.rule,10.5),...question(topic.example,'例题：',true)]);}if(page.length)next();place(paragraph(paper.answer?'练习答案':'同类题练习',14,true));}
+    paper.questions.forEach((q,i)=>place(question(q,(i+1)+'.  ',paper.answer)));
+    place(paragraph(paper.answer?'— 答案解析结束 —':'— 练习卷结束 —',10,false,'center',0));
+    return pages;
+  }
+  function diagram(ctx,d,x,y){
+    ctx.textAlign='left';
+    const w=225,h=142,pad=18,points=d.points||{},bounds=d.bounds||[-1,9,-1,7];const [xmin,xmax,ymin,ymax]=bounds;
+    const scale=Math.min((w-2*pad)/(xmax-xmin),(h-2*pad)/(ymax-ymin)),ox=x+(w-scale*(xmax-xmin))/2,oy=y+(h-scale*(ymax-ymin))/2;
+    const xy=p=>[ox+(p[0]-xmin)*scale,y+h-(oy-y)-(p[1]-ymin)*scale];
+    function line(a,b,color='#111',width=.9){ctx.strokeStyle=color;ctx.lineWidth=width;ctx.beginPath();ctx.moveTo(...xy(a));ctx.lineTo(...xy(b));ctx.stroke();}
+    if(d.axes){for(let a=Math.ceil(xmin);a<=xmax;a++)line([a,ymin],[a,ymax],'#dddddd',.4);for(let b=Math.ceil(ymin);b<=ymax;b++)line([xmin,b],[xmax,b],'#dddddd',.4);line([xmin,0],[xmax,0],'#777',.7);line([0,ymin],[0,ymax],'#777',.7);ctx.font='9px '+FONT;ctx.fillStyle='#111';const a=xy([xmax,0]),b=xy([0,ymax]);ctx.fillText('x',a[0]-5,a[1]-12);ctx.fillText('y',b[0]+6,b[1]);}
+    for(const [a,b] of d.lines||[])line(points[a],points[b]);
+    for(const g of d.graph||[])line([g[2],g[0]*g[2]+g[1]],[g[3],g[0]*g[3]+g[1]],'#111',1.2);
+    ctx.font='10px '+FONT;ctx.fillStyle='#111';for(const [name,p] of Object.entries(points)){const [px,py]=xy(p);ctx.beginPath();ctx.arc(px,py,1.8,0,Math.PI*2);ctx.fill();ctx.fillText(name,px+(p[2]||7)*.7,py+(p[3]||-9)*.7-5);}
+    ctx.font='7px '+FONT;ctx.fillStyle='#555';ctx.fillText(d.axes?'每小格 1 个单位':'示意图，长度以题目条件为准',x,y+h+2);
+  }
+  async function create(paper,onProgress=()=>{}){
+    if(!paper.questions?.length)throw Error('请先勾选题目');
+    if(document.fonts?.ready)await document.fonts.ready;
+    const canvas=document.createElement('canvas');canvas.width=Math.round(W*SCALE);canvas.height=Math.round(H*SCALE);const ctx=canvas.getContext('2d');if(!ctx)throw Error('当前浏览器无法生成 PDF');
+    const measure=(s,size,bold)=>{ctx.font=(bold?'bold ':'')+size+'px '+FONT;return ctx.measureText(s).width;};
+    const pages=layout(paper,measure),images=[];
+    for(let i=0;i<pages.length;i++){
+      ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='white';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.scale(SCALE,SCALE);ctx.textBaseline='top';ctx.textAlign='left';
+      for(const command of pages[i]){if(command.kind==='diagram'){diagram(ctx,command.diagram,command.x,command.y);continue;}ctx.font=(command.bold?'bold ':'')+command.size+'px '+FONT;ctx.fillStyle='#111';ctx.textAlign=command.align;ctx.fillText(command.text,command.align==='center'?W/2:command.x,command.y+2);}
+      ctx.textAlign='center';ctx.font='9px '+FONT;ctx.fillStyle='#666';ctx.fillText(`第 ${i+1} 页 / 共 ${pages.length} 页`,W/2,H-30);
+      images.push({data:canvas.toDataURL('image/jpeg',.97),width:canvas.width,height:canvas.height});onProgress(i+1,pages.length);await new Promise(resolve=>setTimeout(resolve,0));
+    }
+    canvas.width=canvas.height=1;
+    const bytes=buildPDF(images),blob=new Blob([bytes],{type:'application/pdf'});
+    const dataUrl=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(Error('PDF 文件生成失败'));reader.readAsDataURL(blob);});
+    return {dataUrl,images,pages:pages.length,bytes:bytes.length};
+  }
+  return {create,layout,buildPDF};
+})();
+
+</script><script>
 'use strict';
 const $=s=>document.querySelector(s), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const allQuestions=topics.flatMap(t=>t.questions), byId=new Map(allQuestions.map(q=>[q.id,q])), byTopic=new Map(topics.map(t=>[t.id,t]));
@@ -337,11 +418,34 @@ function solutionHTML(q){return `<div class="solution"><strong>答案：${esc(q.
 function showExample(id){const t=byTopic.get(id);showDialog('#detail',dialogHead(t.name,'知识梳理 → 例题讲解 → 分层练习')+`<div class="knowledge"><h3>知识要点</h3><p>${esc(t.rule)}</p><h3>解题方法</h3><p>${esc(t.method)}</p><div class="pitfall"><strong>易错提醒</strong> ${esc(t.pitfall)}</div></div><div class="example"><span class="pill">讲解例题 · ${t.example.type}</span><p>${esc(t.example.text)}</p>${diagramHTML(t.example)}${optionsHTML(t.example)}${solutionHTML(t.example)}</div><div class="dialog-actions"><button class="primary" data-act="practice" data-id="${id}">进入本题型练习</button></div>`);}
 function showAnswer(id){const q=byId.get(id);showDialog('#detail',dialogHead('答案与解析',`${q.id.toUpperCase()} · ${byTopic.get(q.topicId).name}`)+`<p>${esc(q.text)}</p>${diagramHTML(q)}${optionsHTML(q)}${solutionHTML(q)}<div class="pitfall"><strong>方法提示</strong> ${esc(byTopic.get(q.topicId).method)}</div>`);}
 function showCoverage(){showDialog('#detail',dialogHead('全册题型目录',`${topics.length} 个题型，每个含 1 道例题、3 道分层练习`)+`<div class="coverage">${curriculum.map((c,i)=>`<h3>第${'一二三四五六'[i]}章 ${c.name}</h3>${[...c.sections,'单元复习'].map((s,j)=>{const key=`${i+1}.${j===c.sections.length?0:j+1}`;return `<details><summary>${j===c.sections.length?'复习':j+1} ${esc(s)} <span>${topics.filter(t=>t.section===key).length} 个题型</span></summary><ul>${topics.filter(t=>t.section===key).map(t=>`<li><button class="text-button" data-act="coverage-topic" data-id="${t.id}">${esc(t.name)} ↗</button></li>`).join('')}</ul></details>`;}).join('')}`).join('')}<p class="muted">“压轴题”表示该题型下的综合或推理层级。全册不含未在本书目录中列出的教学章节；原创题型仍可继续扩充。</p></div>`);}
-function renderPaper(){const list=state.cart.map(id=>byId.get(id));showDialog('#paper',dialogHead('我的练习卷',`${list.length} 题 · 草稿保存在当前浏览器`)+`<div class="paper-settings"><label>练习卷标题<input id="paper-title" maxlength="80" value="${esc(state.title)}"></label><div class="paper-setting-row"><label>输出内容<select id="paper-mode"><option value="student" ${state.mode==='student'?'selected':''}>学生练习卷</option><option value="answers" ${state.mode==='answers'?'selected':''}>家长答案解析卷</option></select></label><label>作答留白<select id="paper-space">${[['compact','紧凑'],['normal','标准'],['large','宽松']].map(([v,t])=>`<option value="${v}" ${state.space===v?'selected':''}>${t}</option>`).join('')}</select></label><label class="inline-check"><input id="paper-examples" type="checkbox" ${state.examples?'checked':''}>附所选题型的例题讲解</label></div></div><div class="paper-toolbar"><button data-act="sort-paper" ${!list.length?'disabled':''}>按题目形式整理</button><span class="muted">${['基础题','提高题','压轴题'].map(d=>d+' '+list.filter(q=>q.difficulty===d).length).join(' · ')}</span></div><div class="paper-items">${list.length?list.map((q,i)=>`<div class="paper-item"><strong>${i+1}</strong><div><span class="muted">${q.difficulty} · ${q.type} · ${esc(byTopic.get(q.topicId).name)}</span><p>${esc(q.text)}</p></div><div class="order-buttons"><button data-act="up" data-id="${q.id}" aria-label="上移第 ${i+1} 题" ${i===0?'disabled':''}>↑</button><button data-act="down" data-id="${q.id}" aria-label="下移第 ${i+1} 题" ${i===list.length-1?'disabled':''}>↓</button><button data-act="remove" data-id="${q.id}" aria-label="移除第 ${i+1} 题">×</button></div></div>`).join(''):`<div class="empty"><h3>练习卷还是空的</h3><p>从题库勾选题目，可跨章节加入同一份练习卷。</p><button data-act="close">返回选题</button></div>`}</div><div class="dialog-actions paper-footer"><span class="muted">A4 排版 · 学生卷不含练习答案</span><button data-act="preview-paper" ${!list.length?'disabled':''}>排版预览</button><button class="primary" data-act="print" ${!list.length?'disabled':''}>打印 / 存为 PDF</button></div>`);}
+function renderPaper(){const list=state.cart.map(id=>byId.get(id));showDialog('#paper',dialogHead('我的练习卷',`${list.length} 题 · 草稿保存在当前浏览器`)+`<div class="paper-settings"><label>练习卷标题<input id="paper-title" maxlength="80" value="${esc(state.title)}"></label><div class="paper-setting-row"><label>输出内容<select id="paper-mode"><option value="student" ${state.mode==='student'?'selected':''}>学生练习卷</option><option value="answers" ${state.mode==='answers'?'selected':''}>家长答案解析卷</option></select></label><label>作答留白<select id="paper-space">${[['compact','紧凑'],['normal','标准'],['large','宽松']].map(([v,t])=>`<option value="${v}" ${state.space===v?'selected':''}>${t}</option>`).join('')}</select></label><label class="inline-check"><input id="paper-examples" type="checkbox" ${state.examples?'checked':''}>附所选题型的例题讲解</label></div></div><div class="paper-toolbar"><button data-act="sort-paper" ${!list.length?'disabled':''}>按题目形式整理</button><span class="muted">${['基础题','提高题','压轴题'].map(d=>d+' '+list.filter(q=>q.difficulty===d).length).join(' · ')}</span></div><div class="paper-items">${list.length?list.map((q,i)=>`<div class="paper-item"><strong>${i+1}</strong><div><span class="muted">${q.difficulty} · ${q.type} · ${esc(byTopic.get(q.topicId).name)}</span><p>${esc(q.text)}</p></div><div class="order-buttons"><button data-act="up" data-id="${q.id}" aria-label="上移第 ${i+1} 题" ${i===0?'disabled':''}>↑</button><button data-act="down" data-id="${q.id}" aria-label="下移第 ${i+1} 题" ${i===list.length-1?'disabled':''}>↓</button><button data-act="remove" data-id="${q.id}" aria-label="移除第 ${i+1} 题">×</button></div></div>`).join(''):`<div class="empty"><h3>练习卷还是空的</h3><p>从题库勾选题目，可跨章节加入同一份练习卷。</p><button data-act="close">返回选题</button></div>`}</div><div class="dialog-actions paper-footer"><span class="muted">A4 排版 · 学生卷不含练习答案</span><button data-act="preview-paper" ${!list.length?'disabled':''}>排版预览</button><button data-act="print" ${!list.length?'disabled':''}>打印</button><button class="primary" data-act="pdf" ${!list.length?'disabled':''}>下载 PDF</button><p class="print-hint">若没有弹出打印窗口，请下载 PDF，再用 PDF 阅读器打印。</p></div>`);}
 function printHTML(){const list=state.cart.map(id=>byId.get(id)),answer=state.mode==='answers',title=(state.title.trim()||'数学练习卷')+(answer?' · 答案解析':'');const lessons=[...new Set(list.map(q=>q.topicId))].map(id=>byTopic.get(id));return `<div class="paper-document ${state.space}"><h1>${esc(title)}</h1><div class="print-meta">鲁教版五四制 · 七年级上册数学　共 ${list.length} 题</div>${answer?'':'<div class="student-line">姓名：________________　日期：________________</div>'}${state.examples?`<section class="printed-examples"><h2>例题讲解</h2>${lessons.map(t=>`<article class="print-example"><h3>${esc(t.name)}</h3><p>${esc(t.rule)}</p><p><strong>例题：</strong>${esc(t.example.text)}</p>${diagramHTML(t.example)}${optionsHTML(t.example)}${solutionHTML(t.example)}</article>`).join('')}</section><h2 class="exercise-start">${answer?'练习答案':'同类题练习'}</h2>`:''}${list.map((q,i)=>`<article class="print-question"><div class="print-q-title"><b>${i+1}.</b><span>${esc(q.text)}</span></div>${diagramHTML(q)}${optionsHTML(q)}${answer?solutionHTML(q):`<div class="answer-space ${['选择题','填空题'].includes(q.type)?'short':''}" aria-label="作答区域"></div>`}</article>`).join('')}<div class="print-end">— ${answer?'答案解析':'练习卷'}结束 —</div></div>`;}
-function previewPaper(){if(!state.cart.length)return;showDialog('#detail',dialogHead('打印排版预览',state.mode==='answers'?'家长答案解析卷':'学生练习卷')+`<div class="preview-pages">${printHTML()}</div><div class="dialog-actions"><button class="primary" data-act="print">打印 / 存为 PDF</button></div>`);}
-function doPrint(){if(!state.cart.length)return;$('#print-root').innerHTML=printHTML();document.body.classList.add('printing');requestAnimationFrame(()=>{try{window.print();}catch{toast('请使用浏览器的打印功能。');}});}
-window.addEventListener('afterprint',()=>document.body.classList.remove('printing'));
+let pdfBusy=false,printDialogs=[];
+async function previewPaper(download=false){
+  if(!state.cart.length||pdfBusy)return;
+  const paper=structuredClone({title:(state.title.trim()||'数学练习卷')+(state.mode==='answers'?' · 答案解析':''),answer:state.mode==='answers',space:state.space,examples:state.examples,questions:state.cart.map(id=>byId.get(id)),lessons:[...new Set(state.cart.map(id=>byId.get(id).topicId))].map(id=>byTopic.get(id))});
+  const readable=printHTML(),filename=paper.title.replace(/[\\/:*?"<>|]/g,'_')+'.pdf';pdfBusy=true;
+  showDialog('#detail',dialogHead('正在生成 PDF')+'<p id="pdf-progress" role="status">正在排版，请稍候…</p>');
+  const progress=$('#pdf-progress');
+  try{
+    const result=await PaperPDF.create(paper,(n,total)=>{progress.textContent=`正在生成第 ${n} / ${total} 页…`;});
+    if(!progress.isConnected||!$('#detail').open)return;
+    showDialog('#detail',dialogHead('PDF 已生成',`${paper.answer?'家长答案解析卷':'学生练习卷'} · A4 · ${result.pages} 页`)+`<div class="pdf-actions"><a class="primary download-link" id="pdf-download" href="${result.dataUrl}" download="${esc(filename)}">下载 PDF（${result.pages} 页）</a><button data-act="print">打印</button></div><p class="muted">可直接下载 PDF，再用电脑上的 PDF 阅读器打印。以下为实际分页预览。</p><div class="pdf-pages">${result.images.map((p,i)=>`<figure><img src="${p.data}" alt="${esc(paper.title)}，第 ${i+1} 页" loading="lazy"><figcaption>第 ${i+1} 页 / 共 ${result.pages} 页</figcaption></figure>`).join('')}</div><details class="pdf-readable"><summary>查看可复制的文字版</summary>${readable}</details>`);
+    if(download)$('#pdf-download').click();
+  }catch(error){
+    if(progress.isConnected&&$('#detail').open)showDialog('#detail',dialogHead('PDF 暂未生成')+`<p role="alert">${esc(error.message||'导出失败，请重试。')}</p><div class="dialog-actions"><button data-act="pdf">重新生成 PDF</button><button data-act="print">使用浏览器打印</button></div>`);
+  }finally{pdfBusy=false;}
+}
+function preparePrint(){
+  $('#print-root').innerHTML=state.cart.length?printHTML():'<p>尚未勾选题目，请先在题库中选择练习。</p>';
+  if(!printDialogs.length)printDialogs=[$('#paper'),$('#detail')].filter(d=>d.open);
+  for(const dialog of printDialogs)if(dialog.open)dialog.close();
+  document.body.classList.add('printing');
+}
+function restorePrint(){document.body.classList.remove('printing');const dialogs=printDialogs;printDialogs=[];for(const dialog of dialogs)if(dialog.isConnected&&!dialog.open)dialog.showModal();}
+function doPrint(){if(!state.cart.length)return;preparePrint();try{window.print();}catch{toast('当前环境未能打开打印窗口，请下载 PDF 后打印。');}finally{setTimeout(restorePrint,300);}}
+window.addEventListener('beforeprint',preparePrint);
+window.addEventListener('afterprint',restorePrint);
 document.addEventListener('change',e=>{const el=e.target;if(el.dataset.pick){setPicked([el.dataset.pick],el.checked);return;}if(el.id==='type'){state.type=el.value;renderQuestions();}if(el.id==='scope'){state.scope=el.value;state.topic='all';render();}if(el.id==='section-select')navigate(el.value);if(el.id==='paper-mode')state.mode=el.value;if(el.id==='paper-space'){state.space=el.value;save();}if(el.id==='paper-examples')state.examples=el.checked;});
 document.addEventListener('input',e=>{if(e.target.id==='paper-title'){state.title=e.target.value;save();}});
 document.addEventListener('click',e=>{const b=e.target.closest('[data-act]');if(!b||b.disabled)return;const {act,id}=b.dataset;
@@ -356,7 +460,7 @@ if(act==='reset-filters'){state.topic='all';state.difficulty='all';state.type='a
 if(act==='up'||act==='down'){const i=state.cart.indexOf(id),j=i+(act==='up'?-1:1);if(j>=0&&j<state.cart.length){[state.cart[i],state.cart[j]]=[state.cart[j],state.cart[i]];save();renderPaper();}}
 if(act==='remove'){setPicked([id],false);renderPaper();}
 if(act==='sort-paper'){const rank=['选择题','填空题','计算题','证明题','作图题','解答题'];state.cart.sort((a,b)=>rank.indexOf(byId.get(a).type)-rank.indexOf(byId.get(b).type));save();renderPaper();}
-if(act==='preview-paper')previewPaper();if(act==='print')doPrint();});
+if(act==='preview-paper')previewPaper();if(act==='pdf')previewPaper(true);if(act==='print')doPrint();});
 $('#open-paper').addEventListener('click',renderPaper);
 $('#detail').setAttribute('aria-label','题型讲解与预览');$('#paper').setAttribute('aria-label','我的练习卷');
 render();
