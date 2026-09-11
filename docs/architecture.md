@@ -1,0 +1,44 @@
+# 架构与数据说明
+
+## 运行方式
+
+纯静态 HTML / CSS / JavaScript；无构建框架、无第三方运行依赖、无后端接口。`dist/` 同时是开发源文件目录与静态托管目录。`outputs/` 的单文件版本通过内联样式和脚本生成。
+
+## 文件职责
+
+- `dist/index.html`：网页入口、基础布局、脚本加载顺序。
+- `dist/style.css`：桌面、手机、弹窗、A4 打印样式。
+- `dist/data.js`：六章目录、题目构造器 `Q`、题型构造器 `T`，以及第一章题库。
+- `dist/chapter2.js`～`chapter6.js`：第二至第六章题库。
+- `dist/reviews.js`：六章综合复习题。
+- `dist/diagrams.js`：SVG 数学示意图及题目图形数据。
+- `dist/app.js`：筛选、例题与解析、选题草稿、题序调整、打印预览和 WebMCP 接口。
+
+## 数据结构
+
+每个题型包含章、节标识、题型名称、知识要点、方法、易错点、一个讲解例题和三个层级的练习。题目包含类型、题干、答案、步骤、选项及可选示意图。题型 ID 为 `t01` 等，练习 ID 为 `t01-1` 等。SQL 导出给例题增加稳定 ID `t01-example`。
+
+`data/question-bank.json` 保留完整对象。`database/question-bank.sql` 将对象拆成：
+
+| 表 | 含义 |
+| --- | --- |
+| `chapters` | 6 章教材顺序 |
+| `sections` | 26 个教材节次和 6 个单元复习入口，复习的 section_no 为 0 |
+| `topics` | 49 个题型及知识、方法、易错信息 |
+| `questions` | 49 道例题和 147 道练习；选项、步骤、图形保存在 JSON 文本列 |
+
+SQL 开启外键约束，可以导入 SQLite。它是便于迁移的数据快照，未接入当前网页运行流程。
+
+## 浏览器草稿
+
+localStorage 键为 `xunti-paper-v1`，保存选中题号、卷标题和留白设置。没有云端同步；本次归档不读取或上传浏览器存储内容。所有题库内容本身已完整随源码和导出文件保存。
+
+## 打印
+
+由同一组选题生成学生卷或答案解析卷。打印按钮调用浏览器 `window.print()`，CSS `@media print` 只显示专用打印容器。PDF 由用户在浏览器打印对话框中选择“保存为 PDF”生成。
+
+## 开发与迁移
+
+编辑题库后先运行 `npm test`；更新导出文件时运行 `npm run export:data` 和 `npm run build:offline`。题型 ID 当前按脚本加载顺序分配，调整题型顺序可能影响旧浏览器草稿，应在后续扩展时迁移为固定 ID。
+
+`work/package.mjs` 是原创建环境的历史打包脚本，引用当时电脑上的 Sites 工具路径；不属于通用启动步骤。`.openai/hosting.json` 记录了当时注册的站点，尚未上线，不含账号令牌。
