@@ -1,0 +1,13 @@
+.sites-runtime/
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+# Generated only for transporting files to GitHub; not part of the application.
+work/github-upload/
+# The exact historical archive is preserved as Base64 in the repository.
+work/xunti-site.tar.gz
+# Locally reconstructed databases can be regenerated from database/question-bank.sql.
+*.sqlite
+*.sqlite-journal
