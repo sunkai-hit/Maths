@@ -1,6 +1,6 @@
 'use strict';
 const $=s=>document.querySelector(s);
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const allQuestions=topics.flatMap(t=>t.questions),byId=new Map(allQuestions.map(q=>[q.id,q])),byTopic=new Map(topics.map(t=>[t.id,t]));
 const state={section:'1.1',topic:'all',type:'all',scope:'section',cart:[],title:'七年级上册数学练习卷',space:'normal',mode:'student',examples:false};
 try{const saved=JSON.parse(localStorage.getItem('xunti-paper-v1')||'null');if(saved&&typeof saved==='object'){state.cart=Array.isArray(saved.cart)?[...new Set(saved.cart.filter(id=>byId.has(id)))]:[];if(typeof saved.title==='string')state.title=saved.title.slice(0,80);if(['compact','normal','large'].includes(saved.space))state.space=saved.space;}}catch{}
