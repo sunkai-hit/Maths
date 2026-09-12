@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
-const sourceFiles=['data.js','chapter2.js','chapter3.js','chapter4.js','chapter5.js','chapter6.js','reviews.js','diagrams.js'];
+const sourceFiles=['data.js','chapter1a.js','chapter1b.js','chapter1c.js','chapter1d.js','chapter2.js','chapter3.js','chapter4.js','chapter5.js','chapter6.js','reviews.js','diagrams.js'];
 const context=vm.createContext({});
 for(const file of sourceFiles)vm.runInContext(fs.readFileSync('dist/'+file,'utf8'),context,{filename:file});
 const {curriculum,topics}=vm.runInContext('({curriculum,topics})',context);
