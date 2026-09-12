@@ -19,6 +19,6 @@ TID("c1-14","1.0","倍长中线、截长补短与作平行线","线段和差型�
 
 TID("c1-15","1.0","平行线变式与半角模型","作平行线可把角平分线条件转化为等腰三角形或全等条件；半角模型常出现在正方形、等边或一组邻补角中，通过绕公共点旋转构造全等，把线段和转化为一条对应边。","若目标是角平分或等边，可在中点附近作平行线；若出现“大角的一半”以及两条相等边，可考虑绕公共顶点旋转。","半角模型的旋转角必须与大角匹配；旋转后要检查共线关系，再用 SAS 证明第二组全等。",
  Q("证明题","△ABC 中，D、E 在 BC 上且 DE=EC。过 D 作 DF∥AB 交 AE 于 F，且 DF=AC。证明 AE 平分 ∠BAC。","AE 平分 ∠BAC",["过 C 作 CM∥DF，交 AE 延长线于 M。由平行线和对顶角，可证 △DFE≌△CME。","所以 DF=CM；又 DF=AC，得 CM=AC，从而 ∠M=∠CAE。","DF∥AB，所以 ∠DFE=∠BAE；又 ∠DFE=∠M。","故 ∠BAE=∠CAE，AE 平分 ∠BAC。"],[]),
- Q("证明题","上题变式：△ABC 中，∠1=∠2，DE=EC，DF∥AB。证明 DF=AC。","DF=AC",["过 C 作 CM∥DF，交 AE 延长线于 M。","由 DF∥AB 和 ∠1=∠2，可得 ∠M=∠1，从而 AC=CM。","又由平行线、对顶角和 DE=EC，可证 △DFE≌△CME。","因此 DF=CM=AC。"],[]),
+ Q("证明题","上题变式：△ABC 中，AE 平分 ∠BAC（即 ∠BAE=∠CAE），D、E 在 BC 上且 DE=EC，DF∥AB，F 在 AE 上。证明 DF=AC。","DF=AC",["过 C 作 CM∥DF，交 AE 延长线于 M。","由 DF∥AB 和 ∠BAE=∠CAE，可得 ∠M=∠CAE，从而 AC=CM。","又由平行线、对顶角和 DE=EC，可证 △DFE≌△CME。","因此 DF=CM=AC。"],[]),
  Q("证明题","正方形 ABCD 中，E 在 BC 上、F 在 CD 上，∠EAF=45°。证明 EF=BE+DF。","EF=BE+DF",["以 A 为中心把 △ADF 旋转 90° 到 △ABG，则 BG=DF、AG=AF。","利用 ∠EAF=45° 可得 ∠GAE=∠EAF，且 G、B、E 共线。","在 △AGE 和 △AFE 中，AG=AF、AE 公共、夹角相等，所以两三角形 SAS 全等。","EF=EG=BG+BE=DF+BE。"],[]),
  Q("证明题","四边形 ABCD 中，AB=AD，∠B+∠D=180°，E、F 分别在 BC、CD 上，且 ∠EAF=1/2∠BAD。证明 EF=BE+FD。","EF=BE+FD",["延长 FD 到 G，使 DG=BE，连接 AG。","由 ∠B+∠ADC=180° 及邻补角关系得 ∠B=∠ADG；结合 AB=AD、BE=DG，得 △ABE≌△ADG（SAS）。","所以 AE=AG、∠BAE=∠DAG；利用半角条件可得 ∠EAF=∠GAF。","△AEF≌△AGF（SAS），所以 EF=FG=DG+DF=BE+DF。"],[]));
