@@ -45,10 +45,11 @@ for(const [i,c] of curriculum.entries())for(let j=0;j<=c.sections.length;j++)ass
 const chapter1Topics=topics.filter(t=>t.chapter===1);
 const chapter1Questions=chapter1Topics.flatMap(t=>t.questions);
 assert.equal(chapter1Topics.length,28,'第一章应有 28 个知识点/专题');
-assert.equal(chapter1Questions.length,87,'第一章应完整收录 87 道可选原材料题目');
-assert(chapter1Questions.filter(q=>q.figure).length>=70,'第一章原题图收录数量异常');
+assert.equal(chapter1Questions.length,90,'第一章应完整收录 90 道可选原材料题目');
+assert.equal(chapter1Questions.filter(q=>q.figure).length,75,'第一章应保留 75 道原材料题图');
 assert.equal(questionIds.size,questionCount);
 assert.equal(chapter1Questions.find(q=>q.id==='c1-2-8').answer,'8');
+assert.equal(chapter1Questions.find(q=>q.id==='c1-12-e2').answer,'△AMC≌△BMD；∠AEB=60°');
 assert.equal(chapter1Questions.find(q=>q.id==='c1-13-15').answer,'EF=BE+FD');
 assert(chapter1Questions.find(q=>q.id==='c1-13-15').text.includes('1/2∠BAD'));
 
