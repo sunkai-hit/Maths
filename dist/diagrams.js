@@ -13,8 +13,8 @@ const findTopic=name=>topics.find(t=>t.name===name);
 const withTopic=(name,fn)=>{const t=findTopic(name);if(t)fn(t);};
 const midTri={points:{A:[4,6],B:[0,0,-16,16],C:[8,0,6,16],D:[4,0,6,16]},lines:[['A','B'],['B','C'],['C','A'],['A','D']],label:'三角形 ABC，D 为底边 BC 的中点'};
 
-/* 第一章题库已将原材料中多数“如图”条件改写为可独立阅读的文字条件，
- * 避免用不准确的通用示意图替代原图。单元综合及后续章节继续保留原 SVG 示意图。
+/* 第一章完整材料题优先使用 chapter1-figures*.js 中从原 PDF 提取的原题图。
+ * 本文件继续为后续章节及适合结构化表达的题目提供 SVG 示意图。
  */
 withTopic('三角形单元综合',t=>{
  t.example.diagram=midTri;
