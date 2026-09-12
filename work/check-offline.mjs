@@ -4,5 +4,6 @@ import assert from 'node:assert/strict';
 const text=fs.readFileSync('outputs/循题-七上数学家长组卷.html','utf8');
 assert(!/<script\s+src=/.test(text));assert(!/rel="stylesheet"/.test(text));
 let n=0;for(const match of text.matchAll(/<script>([\s\S]*?)<\/script>/g)){new vm.Script(match[1]);n++;}
-assert.equal(n,10);assert(text.includes('@media print'));assert(text.includes('window.print()'));
+assert.equal(n,14,'离线文件尚未同步最新题库，请先运行 npm run build:offline');
+assert(text.includes('@media print'));assert(text.includes('window.print()'));
 console.log(JSON.stringify({offlineScripts:n,syntax:'passed',externalDependencies:0,bytes:Buffer.byteLength(text)}));
