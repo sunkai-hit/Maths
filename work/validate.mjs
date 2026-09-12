@@ -44,8 +44,10 @@ for(const t of topics){
 for(const [i,c] of curriculum.entries())for(let j=0;j<=c.sections.length;j++)assert(topics.some(t=>t.section===`${i+1}.${j}`),`Missing ${i+1}.${j}`);
 const chapter1Topics=topics.filter(t=>t.chapter===1);
 const chapter1Questions=chapter1Topics.flatMap(t=>t.questions);
-assert.equal(topics.length,70,'当前全册应有 70 个知识点/专题');
-assert.equal(questionCount,216,'当前全册应有 216 道可选题目');
+/* 当前题库：第一章 28 个；第二至六章正文 35 个；第二至六章综合复习 5 个，共 68 个。 */
+assert.equal(topics.length,68,'当前全册应有 68 个知识点/专题');
+/* 第一章 90 道；其余 40 个题型各 3 道可选题，共 120 道，总计 210 道。 */
+assert.equal(questionCount,210,'当前全册应有 210 道可选题目');
 assert.equal(chapter1Topics.length,28,'第一章应有 28 个知识点/专题');
 assert.equal(chapter1Questions.length,90,'第一章应完整收录 90 道可选原材料题目');
 assert.equal(chapter1Questions.filter(q=>q.figure).length,75,'第一章应保留 75 道原材料题图');
