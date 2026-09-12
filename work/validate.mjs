@@ -44,6 +44,8 @@ for(const t of topics){
 for(const [i,c] of curriculum.entries())for(let j=0;j<=c.sections.length;j++)assert(topics.some(t=>t.section===`${i+1}.${j}`),`Missing ${i+1}.${j}`);
 const chapter1Topics=topics.filter(t=>t.chapter===1);
 const chapter1Questions=chapter1Topics.flatMap(t=>t.questions);
+assert.equal(topics.length,70,'当前全册应有 70 个知识点/专题');
+assert.equal(questionCount,216,'当前全册应有 216 道可选题目');
 assert.equal(chapter1Topics.length,28,'第一章应有 28 个知识点/专题');
 assert.equal(chapter1Questions.length,90,'第一章应完整收录 90 道可选原材料题目');
 assert.equal(chapter1Questions.filter(q=>q.figure).length,75,'第一章应保留 75 道原材料题图');
