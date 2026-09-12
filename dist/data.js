@@ -15,7 +15,7 @@ const C1=(qid,source,type,text,answer,steps,options=[],figureId=null,meta={})=>S
 function addTopic(id,section,name,rule,method,pitfall,example,questions){
  const [chapter,part]=section.split('.').map(Number);
  const normalized=questions.map((q,i)=>({...q,id:q.qid||`${id}-${i+1}`,topicId:id,chapter,section}));
- const ex={...example,id:example?.qid||`${id}-example`,topicId:id,chapter,section};
+ const ex={...example,id:`${id}-example`,sourceQuestionId:example?.qid||null,topicId:id,chapter,section};
  topics.push({id,section,chapter,part,name,rule,method,pitfall,example:ex,questions:normalized});
 }
 /* 一个题型可以挂任意数量题目，不再要求“基础/提高/压轴”各一道。 */
