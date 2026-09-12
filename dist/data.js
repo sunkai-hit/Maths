@@ -1,9 +1,4 @@
-/* 第一章题库依据用户提供的《鲁教七上数学（1三角形）》整理。
- * 保留材料的知识点、训练题与专题逻辑；对少量依赖原图/OCR错位的题干，
- * 仅做数字化表述和符号统一，不改变原材料的答案与主要解题思路。
- * t01~t07 保留原项目核心题型 ID；新增第一章题型使用 c1-*，
- * 后续章节仍从 t08 开始，避免旧浏览器草稿中的后续章节题号整体漂移。
- */
+/* 题库基础结构。第一章按用户提供的完整材料全量整理；后续章节继续兼容原 T(...) 写法。 */
 const curriculum=[
  {name:'三角形',sections:['认识三角形','图形的全等','探索三角形全等的条件','三角形的尺规作图','利用三角形全等测距离']},
  {name:'轴对称',sections:['轴对称现象','探索轴对称的性质','简单的轴对称图形','利用轴对称进行设计']},
@@ -13,15 +8,21 @@ const curriculum=[
  {name:'一次函数',sections:['函数','一次函数','一次函数的图象','确定一次函数的表达式','一次函数的应用']}
 ];
 const topics=[];
-const Q=(type,text,answer,steps,options=[],diagram=null)=>({type,text,answer,steps,options,diagram});
-function addTopic(id,section,name,rule,method,pitfall,example,basic,improve,challenge){
+const Q=(type,text,answer,steps,options=[],diagram=null,meta={})=>({type,text,answer,steps,options,diagram,...meta});
+const SQ=(qid,source,type,text,answer,steps,options=[],diagram=null,meta={})=>Q(type,text,answer,steps,options,diagram,{qid,source,...meta});
+function addTopic(id,section,name,rule,method,pitfall,example,questions){
  const [chapter,part]=section.split('.').map(Number);
- const questions=[basic,improve,challenge].map((q,i)=>({...q,id:id+'-'+(i+1),difficulty:['基础题','提高题','压轴题'][i],topicId:id,chapter,section}));
- topics.push({id,section,chapter,part,name,rule,method,pitfall,example,questions});
+ const normalized=questions.map((q,i)=>({...q,id:q.qid||`${id}-${i+1}`,topicId:id,chapter,section}));
+ const ex={...example,id:example?.qid||`${id}-example`,topicId:id,chapter,section};
+ topics.push({id,section,chapter,part,name,rule,method,pitfall,example:ex,questions:normalized});
 }
-const TID=(id,section,name,rule,method,pitfall,example,basic,improve,challenge)=>addTopic(id,section,name,rule,method,pitfall,example,basic,improve,challenge);
+/* 第一章：例题数量与练习数量不再固定，每个题型可以挂任意数量原材料题目。 */
+function TS(id,section,name,rule,method,pitfall,example,...questions){if(example?.alsoQuestion)questions=[example,...questions];addTopic(id,section,name,rule,method,pitfall,example,questions);}
+/* 第二章以后沿用旧写法。旧数据中的难度字段只保留为兼容数据，页面已不再展示或筛选难度。 */
 let topicSerial=7;
 function T(section,name,rule,method,pitfall,example,basic,improve,challenge){
  const id='t'+String(++topicSerial).padStart(2,'0');
- addTopic(id,section,name,rule,method,pitfall,example,basic,improve,challenge);
+ if(section==='1.0') return; // 第一章单元复习已由完整材料专题题库替代；仍递增序号以保持后续旧 ID 稳定。
+ const qs=[basic,improve,challenge].map((q,i)=>({...q,difficulty:['基础题','提高题','压轴题'][i]}));
+ addTopic(id,section,name,rule,method,pitfall,example,qs);
 }
