@@ -3,7 +3,7 @@ import vm from 'node:vm';
 import assert from 'node:assert/strict';
 
 const context=vm.createContext({TextEncoder,atob});
-for(const file of ['data.js','chapter2.js','chapter3.js','chapter4.js','chapter5.js','chapter6.js','reviews.js','diagrams.js','pdf-export.js'])
+for(const file of ['data.js','chapter1a.js','chapter1b.js','chapter1c.js','chapter1d.js','chapter2.js','chapter3.js','chapter4.js','chapter5.js','chapter6.js','reviews.js','diagrams.js','pdf-export.js'])
   vm.runInContext(fs.readFileSync('dist/'+file,'utf8'),context,{filename:file});
 const {PaperPDF,topics}=vm.runInContext('({PaperPDF,topics})',context);
 const questions=topics.flatMap(t=>t.questions);
@@ -27,7 +27,7 @@ for(const answer of [false,true])for(const examples of [false,true])for(const sp
   checkBounds(pages);
   const items=pages.flat(),text=items.filter(i=>i.kind==='text').map(i=>i.text);
   questions.forEach((q,i)=>assert.equal(text.filter(t=>t.startsWith((i+1)+'.  '+q.text.slice(0,5))).length,1,'Each practice question appears once'));
-  assert.equal(text.filter(t=>t.startsWith('答案：')).length,(answer?147:0)+(examples?49:0),'Student and answer outputs remain separate');
+  assert.equal(text.filter(t=>t.startsWith('答案：')).length,(answer?questions.length:0)+(examples?topics.length:0),'Student and answer outputs remain separate');
   assert.equal(items.filter(i=>i.kind==='diagram').length,questions.filter(q=>q.diagram).length+(examples?topics.filter(t=>t.example.diagram).length:0));
   cases++;
 }
