@@ -1,4 +1,5 @@
-/* 第一章题图：从用户提供 PDF 的原始页面/矢量内容提取并保留。 */
+/* 第一章题图：由用户提供 PDF 的最终页面渲染结果逐题精确裁切。 */
+const chapter1FigureVersion='page-render-crops-v2';
 const chapter1Figures={};
 const F=id=>{
  const f=chapter1Figures[id];
