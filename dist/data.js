@@ -10,19 +10,20 @@ const curriculum=[
 const topics=[];
 const Q=(type,text,answer,steps,options=[],diagram=null,meta={})=>({type,text,answer,steps,options,diagram,...meta});
 const SQ=(qid,source,type,text,answer,steps,options=[],diagram=null,meta={})=>Q(type,text,answer,steps,options,diagram,{qid,source,...meta});
+/* 第一章原材料题：figureId 对应 chapter1-figures*.js 中从原 PDF 提取的题图。 */
+const C1=(qid,source,type,text,answer,steps,options=[],figureId=null,meta={})=>SQ(qid,source,type,text,answer,steps,options,meta.diagram||null,{...meta,figureId,figure:figureId?F(figureId):null});
 function addTopic(id,section,name,rule,method,pitfall,example,questions){
  const [chapter,part]=section.split('.').map(Number);
  const normalized=questions.map((q,i)=>({...q,id:q.qid||`${id}-${i+1}`,topicId:id,chapter,section}));
  const ex={...example,id:example?.qid||`${id}-example`,topicId:id,chapter,section};
  topics.push({id,section,chapter,part,name,rule,method,pitfall,example:ex,questions:normalized});
 }
-/* 第一章：例题数量与练习数量不再固定，每个题型可以挂任意数量原材料题目。 */
+/* 一个题型可以挂任意数量题目，不再要求“基础/提高/压轴”各一道。 */
 function TS(id,section,name,rule,method,pitfall,example,...questions){if(example?.alsoQuestion)questions=[example,...questions];addTopic(id,section,name,rule,method,pitfall,example,questions);}
-/* 第二章以后沿用旧写法。旧数据中的难度字段只保留为兼容数据，页面已不再展示或筛选难度。 */
+/* 第二章以后沿用旧题库写法，但运行数据不再附加难度标签。 */
 let topicSerial=7;
 function T(section,name,rule,method,pitfall,example,basic,improve,challenge){
  const id='t'+String(++topicSerial).padStart(2,'0');
- if(section==='1.0') return; // 第一章单元复习已由完整材料专题题库替代；仍递增序号以保持后续旧 ID 稳定。
- const qs=[basic,improve,challenge].map((q,i)=>({...q,difficulty:['基础题','提高题','压轴题'][i]}));
- addTopic(id,section,name,rule,method,pitfall,example,qs);
+ if(section==='1.0') return; // 第一章单元复习由完整材料专题题库替代；仍递增序号以保持后续旧 ID 稳定。
+ addTopic(id,section,name,rule,method,pitfall,example,[basic,improve,challenge]);
 }
